@@ -1,0 +1,21 @@
+// Responsive carousel
+.carousel {
+position: relative;
+height: 600px;
+} 
+.carousel .item {
+  height: 600px;
+}
+
+.carousel-inner > .item > img {
+    position:absolute;
+    right:0;
+    left:50%;
+    margin-left:-960px; /* Half the width of the image */
+    height:600px;
+    max-width:none;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+}
