@@ -7,5 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $mypass = mysqli_real_escape_string($conn, $_POST['pass']);
 
     $sql = "SELECT idu FROM utilizador WHERE username = '$myuser' and senha= '$mypass'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $active = $row['active'];
+
+    $count = mysqli_num_rows($result);
+    
 }
 ?>
