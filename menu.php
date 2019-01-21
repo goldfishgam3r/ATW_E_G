@@ -18,7 +18,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="login.php">Login</a></li>
-          <li><a href="registo.html">Registo</a></li>
+          <li><a href="registo.php">Registo</a></li>
           
         </ul>
       </div><!--/.nav-collapse -->
