@@ -4,7 +4,6 @@ require("config.php");
 
 $queryevento= "SELECT * FROM evento WHERE ide=1";
 $resultevento= mysqli_query($conn, $queryevento);
-$rowevento= mysqli_fetch_array($resultevento);
 
 ?>
 <html>
@@ -17,50 +16,49 @@ $rowevento= mysqli_fetch_array($resultevento);
 </head>
 <body>
 <!-- Navbar -->    
-<nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+<?php
+require('menu.php');
+require('carousel.php');
+?>
 <!--  Jumbotron  -->
     <div class="jumbotron">
       <div class="container">       
-      <table id="evento">
-        <tr>
-            <td><?php echo $rowevento["ide"];?></td>
-      </table>      
+      <table class="table table-hover table-bordered " style = "text-align: center; margin:0;">
+						<thead>
+							<tr class="active">
+								<th>Title</th>
+								<th>Quantity</th>
+								<th>Status</th>
+								<th>Delivery</th>
+								<th>Edit/Delete product</th>
+							</tr>
+						</thead>
+						<tbody>
+                        <?php 
+                        $count= 1;
+							for ($i = 0; $i < $count; $i++) {
+								$rowevento = mysqli_fetch_array ($resultevento);						
+						?>
+							<tr>
+								<td><?= $rowProduto ['nome'] ?> </td>
+								<td><?= $rowProduto ['quantidade'] ?> </td>
+									<?php if ($rowProduto ['estado'] == 1) { ?>
+									<td class="success text-success"><b>Active</b></td>
+									<?php } else { ?>
+									<td class="danger text-danger"><b>Inactive</b></td>
+									<?php } ?>
+									
+									<?php if ($rowProduto ['delivery'] == 1) { ?>
+									<td class="success text-success"><b>Delivered</b></td>
+									<?php } else { ?>
+									<td class="danger text-danger"><b>Undelivered</b></td>
+									<?php } ?>
+									
+									<td> <a href="bd_updateProduto.php?ID=<?=$rowProduto ['id_produto']; ?>" class="btn btn-warning" name="enviarEvento">Update/Delete Cause</a></td>
+							</tr>
+						<?php } ?>
+						</tbody>
+					</table>
       </div>
     </div>
 
