@@ -17,8 +17,20 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <?php
+          session_start();
+          if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+            ?>
+          <li><a href="welcome.php"><?php echo($_SESSION["username"])?></a></li>
+          <li><a href="logout.php">Logout</a></li>
+          <?php
+          }else{
+            ?>
+             <li><a>Visitante</a></li>
           <li><a href="login.php">Login</a></li>
-          <li><a href="registo.php">Registo</a></li>
+          <?php
+          }
+          ?>
           
         </ul>
       </div><!--/.nav-collapse -->
