@@ -40,8 +40,8 @@ require('carousel.php');
 								$rowevento = mysqli_fetch_array ($resultevento);						
 						?>
 							<tr>
-								<td><?= $rowProduto ['nome'] ?> </td>
-								<td><?= $rowProduto ['quantidade'] ?> </td>
+								<td><?= $rowevento ['desigancao'] ?> </td>
+								<td><?= $rowProduto ['local'] ?> </td>
 									<?php if ($rowProduto ['estado'] == 1) { ?>
 									<td class="success text-success"><b>Active</b></td>
 									<?php } else { ?>
