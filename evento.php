@@ -13,4 +13,5 @@ foreach($rowevento as $evento){
 ?>
 <html>
 <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
- <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+<script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+<script>
