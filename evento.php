@@ -6,19 +6,19 @@ $queryevento= "SELECT * FROM evento WHERE ide=1";
 $resultevento= mysqli_query($conn, $queryevento);
 $rowevento= mysqli_fetch_array($resultevento);
 
-/*foreach($rowevento as $evento){
+foreach($rowevento as $evento){
     echo $evento."|";
-}*/
-
+}
+exit;
 $utilizador = $rowEvento ['idu'];//criador do artigo
-	
-	$queryOrg = "SELECT * FROM utilizador WHERE idu = '$utilizador'";
-	$resultOrg = mysqli_query ($conn, $queryOrg);
-	$rowOrg = mysqli_fetch_array ($resultOrg);
+$queryOrg = "SELECT * FROM utilizador WHERE idu = '$utilizador'";
+$resultOrg = mysqli_query ($conn, $queryOrg);
+$rowOrg = mysqli_fetch_array ($resultOrg);
 //print_r($rowevento["ide"]);
 ?>
 <html>
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
     <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
 </head>
