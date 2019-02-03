@@ -26,8 +26,8 @@ require('carousel.php');
       <table class="table table-hover table-bordered " style = "text-align: center; margin:0;">
 						<thead>
 							<tr class="active">
-								<th>Title</th>
-								<th>Quantity</th>
+								<th>Designação</th>
+								<th>Local</th>
 								<th>Status</th>
 								<th>Delivery</th>
 								<th>Edit/Delete product</th>
