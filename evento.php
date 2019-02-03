@@ -28,8 +28,10 @@ require('carousel.php');
 							<tr class="active">
 								<th>Designação</th>
 								<th>Local</th>
-								<th>Status</th>
-								<th>Delivery</th>
+								<th>Coordenadas</th>
+								<th>Categoria</th>
+                <th>Data do evento</th>
+                <th>Estado</th>
 								<th>Edit/Delete product</th>
 							</tr>
 						</thead>
