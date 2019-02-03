@@ -10,7 +10,7 @@ $resultevento= mysqli_query($conn, $queryevento);
 <head>
     <meta charset="utf-8">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
-      <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
     <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
 </head>
@@ -18,7 +18,6 @@ $resultevento= mysqli_query($conn, $queryevento);
 <!-- Navbar -->    
 <?php
 require('menu.php');
-require('carousel.php');
 ?>
 <!--  Jumbotron  -->
     <div class="jumbotron">
@@ -43,19 +42,15 @@ require('carousel.php');
 						?>
 							<tr>
 								<td><?= $rowevento ['desigancao'] ?> </td>
-								<td><?= $rowProduto ['local'] ?> </td>
-									<?php if ($rowProduto ['estado'] == 1) { ?>
-									<td class="success text-success"><b>Active</b></td>
+								<td><?= $rowevento ['local'] ?> </td>
+                <td><?= $rowevento ['coordenadas'] ?> </td>
+                <td><?= $rowevento ['categoria'] ?> </td>
+                <td><?= $rowevento ['dataevento'] ?> </td>
+									<?php if ($rowProduto ['ativo'] == 1) { ?>
+									<td class="success text-success"><b>Ativo</b></td>
 									<?php } else { ?>
-									<td class="danger text-danger"><b>Inactive</b></td>
-									<?php } ?>
-									
-									<?php if ($rowProduto ['delivery'] == 1) { ?>
-									<td class="success text-success"><b>Delivered</b></td>
-									<?php } else { ?>
-									<td class="danger text-danger"><b>Undelivered</b></td>
-									<?php } ?>
-									
+									<td class="danger text-danger"><b>Desativo</b></td>
+									<?php } ?>									
 									<td> <a href="bd_updateProduto.php?ID=<?=$rowProduto ['id_produto']; ?>" class="btn btn-warning" name="enviarEvento">Update/Delete Cause</a></td>
 							</tr>
 						<?php } ?>
