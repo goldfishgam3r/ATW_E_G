@@ -1,10 +1,27 @@
+<head>
+  <meta charset="UTF-8">
+  <title>PR01</title>
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <?php
+    require('menu.php');
+  ?>
+
 <?php
 // Initialize the session
 session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
+    header("location: index.php");
     exit;
 }
  
@@ -65,7 +82,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["tipo"] = $tipo;                           
                             
                             // Redirect user to welcome page
-                            header("location: welcome.php");
+                            header("location: index.php");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
