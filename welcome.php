@@ -1,3 +1,20 @@
+<head>
+  <meta charset="UTF-8">
+  <title>PR01</title>
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <?php
+    require('menu.php');
+  ?>
+
 <?php
 // Initialize the session
 session_start();
