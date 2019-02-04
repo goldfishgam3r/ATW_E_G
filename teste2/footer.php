@@ -6,9 +6,7 @@
                     <h3> Information </h3>
                     <ul>
                         <li> <a href="#about"> About </a> </li>
-                        <li> <a href="#causes"> How to help? </a> </li>
-                        <li> <a href="#services"> Services </a> </li>
-                        <li> <a href="#contact"> Contact </a> </li>
+                         <li> <a href="#contact"> Contact </a> </li>
                     </ul>
                 </div>
                 <div class="col-md-6">
@@ -42,7 +40,7 @@
     
     <div class="footer-bottom">
         <div class="container">
-            <p class="pull-left">© INEM All right reserved.</p>
+            <p class="pull-left">© Help Running All right reserved.</p>
             <div class="pull-right">
             </div>
         </div>
