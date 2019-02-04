@@ -11,5 +11,5 @@ include('config.php');
     if (!isset($_SESSION['loggedin'])){
         header("location: index.php");
     }
-    header("location: welcome.php");
+    //header("location: welcome.php");
 ?>
