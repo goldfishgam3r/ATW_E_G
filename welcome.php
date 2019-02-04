@@ -1,6 +1,3 @@
-<?php
-require ('session.php');
-?>
 <head>
   <meta charset="UTF-8">
   <title>PR01</title>
@@ -15,7 +12,7 @@ require ('session.php');
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <?php
-    require('menu.php');
+    require('menulogged.php');
   ?>
 
 <?php
