@@ -14,7 +14,7 @@
           <li class="active"><a href="index.php">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="#contact">Contact</a></li>
-          <?php if(strcmp)
+          
           <li><a href="evento.php">Eventos</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
