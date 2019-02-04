@@ -2,15 +2,15 @@
 include('config.php');
 	
 	$dataAtual = date('Y-m-d');
-	$query = "UPDATE evento SET estado = 0 WHERE data_fim < '$dataAtual'";
+	$query = "UPDATE evento SET ativo = 0 WHERE dataevento < '$dataAtual'";
 	$result = mysqli_query ($conn, $query);
 	
-	$sqlGetEventos = "SELECT * FROM evento WHERE estado = 1 ORDER BY data_ini ASC";
+	$sqlGetEventos = "SELECT * FROM evento WHERE ativo = 1";
 	$resultGetEventos = mysqli_query($conn,$sqlGetEventos);
 	$count = mysqli_num_rows($resultGetEventos);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <title>WeShare</title>
   <meta charset="utf-8">
@@ -37,12 +37,10 @@ include('config.php');
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8" style = "text-align = left" >
-      <h2>About Company Page</h2><br>
-      <h2 style = "color:#007a99;"><strong>Who we are</strong></h2><br>
-      <p>A “We Share” consiste num projeto elaborado por um conjunto de estudantes de diversas licenciaturas desde gestão à engenharia informática e à contabilidade. </p>
-	  <p>Estes jovens decidiram criar uma entidade solidária, constituída por uma equipa dinâmica, motivada e apaixonada em que o principal objetivo passa pela solidariedade e partilha com os outros. </p>
-	  <p> “We Share” é uma organização com uma nova forma de apoio onde a sociedade em geral pode apoiar as diversas causas sociais existentes e particularmente outras pessoas. </p>
-	 <br><button class="btn btn-default btn-lg">Get in Touch</button>
+      <h2>Sobre a página da empresa</h2><br>
+      <h2 style = "color:#007a99;"><strong>Quem somos?</strong></h2><br>
+      <p>A “Help Running” consiste num projeto elaborado por uma dupla de estudantes da licenciatura de engenharia informática. </p>
+	  <p>Estes jovens criaram uma página que permitisse a todas as pessoas com alguma limitação fisica podessem inscrever-se em provas de atletismo</p>
     </div>
     <div class="col-sm-4" align = "right">
 	<img src="images/Redh.png" width="300" height="261" class="d-inline-block align-top slideanim" alt="" style="margin-bottom:10px;">	        
@@ -50,71 +48,18 @@ include('config.php');
   </div>
 </div>
 
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-	<span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h2><strong style = "color:#007a99;">MISSION:</strong></h2>
-	  <p>Our organization is focused on helping others, working in emergent situations. </p>  	  
-	  <p>Encourages sharing of asset and assistance in alarming situations and we also help people rebuild their lives and follow your dreams.</p>
-	  </br>
-	  <h2><strong style = "color:#007a99;">VISION:</strong></h2> 
-	  <p>We aim to reduce inequalities by creating a more harmonious, more inclusive, less indifferent and more supportive world.  </p>
-	  <p>We intend to be a reference organization in the creation and dynamization of responses to the needs and potential of people.</p>
-	  
-	</div>
-  </div>
-</div>
-
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center" >
-  <h2><Strong>SERVICES<strong></h2>
-  <h3>What we offer</h3>
-  <br>
-  <div class="row slideanim" >
-    <div class="col-sm-6">
-      <span class="glyphicon glyphicon-eye-open logo-small"></span>
-      <h4>Visibility</h4>
-      <p>We can help your organazition to be recognized.</p><p> Join us, and power up the visibility of your cause!</p>
-    </div>
-    <div class="col-sm-6">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>Ways of Help</h4>
-      <p>We provide more ways for people to contribute and support your causes</p><p> By donating there products!</p>
-    </div>
-  </div>
-</div>
-  <br><br>
-  <hr>
-<div id="partners" class="container-fluid text-center">
- <h2><Strong>Some Partners<strong></h2>
-  <h3>Join us too!</h3>
-  <br><br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-		<img src="images/Logo2.jpg" width="150" height="110" class="d-inline-block align-top slideanim" alt="" style="margin-bottom:10px;">	        
-    </div>
-    <div class="col-sm-4">
-		<img src="images/Cruz.jpg" width="150" height="110" class="d-inline-block align-top slideanim" alt="" style="margin-bottom:10px;">	        
-    </div>
-	<div class="col-sm-4">
-		<img src="images/logotiponariz.jpg" width="190" height="110" class="d-inline-block align-top slideanim" alt="" style="margin-bottom:10px;">	        
-    </div>
-  </div>
 </div>
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
+  <h2 class="text-center">CONTACTO</h2>
   <div class="row">
     <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Porto, PT</p>
       <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> weshare@weshare.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> helprunning@helprunning.com</p>
     </div>
     <div class="col-sm-7 slideanim">
       <div class="row">
@@ -134,25 +79,6 @@ include('config.php');
     </div>
   </div>
 </div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div id = "causes" class="container">
-		<h3 class="tituloHeart">Support the causes you want and help who need the most!</h3>
-		<div class="login-or">
-			<hr class="hr-or">
-			<span class="span-or"><i class="heart glyphicon glyphicon-heart-empty"></i></span>
-		</div>
-	</div>	
-	</br>
 	
 	<div class="container">
 		<div class="row">
