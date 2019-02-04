@@ -1,3 +1,6 @@
+<?php
+require ('session.php');
+?>
 <head>
   <meta charset="UTF-8">
   <title>PR01</title>
