@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $email_err = "Please enter an e-mail.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE email = ?";
+        $sql = "SELECT idu FROM utilizador WHERE email = ?";
         
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -71,7 +71,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //Validate NIF
     if(empty(trim($_POST["nif"]))){
         $nif = "999999990";
-    } elseif(strlen(trim($_POST["nif"])) == 9 && ctype_digit($nif)){
+    } elseif(strlen(trim($_POST["nif"])) == 9){
         $nif = trim($_POST["nif"]);
     } else{
         $nif_err = "NIF inválido, por favor verifique.";
@@ -79,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     //Validate CC
     if(!empty(trim($_POST["cc"]))){
-        if(strlen(trim($_POST["cc"])) == 8 && ctype_digit($cc)){
+        if(strlen(trim($_POST["cc"])) == 8){
             $nif = trim($_POST["cc"]);
         }else{
             $cc_err = "Nº civil inválido, por favor verifique.";
@@ -91,25 +91,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate phone
     if(empty(trim($_POST["telf"]))){
         $telf_err = "Por favor insira um número de telefone.";     
-    } elseif(strlen(trim($_POST["telf"])) != 9 || !ctype_digit($telf)){
+    } elseif(strlen(trim($_POST["telf"])) != 9){
         $telf_err = "O Nº de telefone inserido não é válido.";
     } else{
         $telf = trim($_POST["telf"]);
     }
     
     // Check input errors before inserting in database
-    if(empty($email_err) && empty($password_err) && empty($confirm_password_err)){
+    if(empty($email_err) && empty($password_err) && empty($confirm_password_err) && empty($telf_err) && empty($cc_err) && empty($nif_err) && empty($nome_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (email, password) VALUES (?, ?)";
+        $sql = "INSERT INTO utilizador (nome, nif, cc, datan, email, telef, senha) VALUES (?, ?, ?, ?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_password);
+            mysqli_stmt_bind_param($stmt, $param_nome, $param_nif, $param_cc, $param_datan, $param_email, $param_telef, $param_senha);
             
             // Set parameters
             $param_email = $email;
-            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            $param_senha = $password;
+            $param_nome = $nome;
+            $param_nif = $nif;
+            $param_cc = $cc;
+            $param_datan = $datan;
+            $param_telef = $telf;
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -191,7 +196,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group <?php echo (!empty($telf_err)) ? 'has-error' : ''; ?>">
                 <label>Telefone*</label>
                 <input type="tel" name="telf" class="form-control" value="<?php echo $telf; ?>">
-                <span class="help-block"><?php echo $cc_telf; ?></span>
+                <span class="help-block"><?php echo $telf_err; ?></span>
             </div>  
 
             <div class="form-group">
@@ -199,7 +204,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="reset" class="btn btn-default" value="Reset">
             </div>
 
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
     </div>    
 </body>
