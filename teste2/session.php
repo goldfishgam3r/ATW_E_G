@@ -2,9 +2,9 @@
 	//Session.php o estado da session, caso não exista retorna para a pagina principal.
    include('config.php');
    session_start();
-   $user = $_SESSION['login_user'];
-   $tipoUser = $_SESSION['tipo_user'];
-   $idUser = $_SESSION['id_user'];
+   $user = $_SESSION['username'];
+   $tipoUser = $_SESSION['tipo'];
+   $idUser = $_SESSION['id'];
    
    /*
    
@@ -14,7 +14,7 @@
    
    $login_session = $row['username'];*/
    
-   if(!isset($_SESSION['login_user'])){
+   if(!isset($_SESSION['username'])){
       header("location: index.php");
    }
 ?>
