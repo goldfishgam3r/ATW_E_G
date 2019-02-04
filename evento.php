@@ -46,7 +46,7 @@ require('menu.php');
                 <td><?= $rowevento ['coordenadas'] ?> </td>
                 <td><?= $rowevento ['categoria'] ?> </td>
                 <td><?= $rowevento ['dataevento'] ?> </td>
-									<?php if ($rowProduto ['ativo'] == 1) { ?>
+									<?php if ($rowevento ['ativo'] == 1) { ?>
 									<td class="success text-success"><b>Ativo</b></td>
 									<?php } else { ?>
 									<td class="danger text-danger"><b>Desativo</b></td>
