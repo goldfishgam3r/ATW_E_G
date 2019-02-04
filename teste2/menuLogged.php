@@ -15,20 +15,19 @@
 		<?php $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 			if (strpos($url,'welcome.php') !== false) { ?>
 
-		<li><a href="#about">About us</a></li>
-		<li><a href="#services">Services</a></li>
-		<li><a href="#partners">Partners</a></li>
-        <li><a href="#contact">Contact</a></li>
+		<li><a href="#about">Sobre Nós</a></li>
+		<li><a href="#partners">Parcerias</a></li>
+        <li><a href="#contact">Contactos</a></li>
 		<?php } ?>
 		<?php if(strcmp($tipoUser, "org")==0) { ?>
 			<li class="dropdown">
 			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Causes<span class="caret"></span></a>
 			  <ul class="dropdown-menu">
-				<li><a href="welcome.php">Search Causes</a></li>
-				<li><a href="criarEvento.php">Create Causes</a></li>
-				<li><a href="gerirEvento.php">Manage Causes</a></li>
+				<li><a href="welcome.php">Procurar Eventos</a></li>
+				<li><a href="criarEvento.php">Criar Evento</a></li>
+				<li><a href="gerirEvento.php">Gerir Evento</a></li>
 				<li role="separator" class="divider"></li>
-				<li><a href="myProduto.php">Donated Products</a></li>
+				<li><a href="criarprova.php">Criar Provas</a></li>
 			  </ul>
 			</li>
 		<?php } ?>
