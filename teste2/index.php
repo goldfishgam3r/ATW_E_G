@@ -43,7 +43,7 @@ include('config.php');
 	  <p>Estes jovens criaram uma página que permitisse a todas as pessoas com alguma limitação fisica podessem inscrever-se em provas de atletismo</p>
     </div>
     <div class="col-sm-4" align = "right">
-	<img src="images/Redh.png" width="300" height="261" class="d-inline-block align-top slideanim" alt="" style="margin-bottom:10px;">	        
+	<img src="images/logoHR.png" width="300" height="261" class="d-inline-block align-top slideanim" alt="" style="margin-bottom:10px;">	        
     </div>
   </div>
 </div>

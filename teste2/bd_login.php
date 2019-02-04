@@ -49,7 +49,7 @@ if(isset($_POST['login'])){
 		  }
   }else {
 	require("failLogin.php");
-	echo "<script type='text/javascript'>alert('O seu username ou paswword é invalida!')</script>";
+	echo "<script type='text/javascript'>alert('O seu username ou password é invalida!')</script>";
 		  
   }
 }
