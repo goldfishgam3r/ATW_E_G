@@ -9,14 +9,14 @@ if(isset($_POST['login'])){
   $passwordEncriptada = password_hash($_POST["passwordLogin"], PASSWORD_BCRYPT);
   
   
-  $sqlLogin = "SELECT id_utilizador,estado,username,tipo, password FROM user WHERE username = '$myusername'";
+  $sqlLogin = "SELECT idu,ativo,username,Tipo_user, senha FROM utilizador WHERE username = '$myusername'";
   $resultLogin = mysqli_query($conn,$sqlLogin);
   $rowLogin = mysqli_fetch_array($resultLogin,MYSQLI_ASSOC);
-  $estadoLogin=$rowLogin["estado"];
-  $tipoLogin=$rowLogin["tipo"];
-  $idLogin=$rowLogin["id_utilizador"];
+  $estadoLogin=$rowLogin["ativo"];
+  $tipoLogin=$rowLogin["Tipo_user"];
+  $idLogin=$rowLogin["idu"];
   
-  $testePass = password_verify ( $_POST["passwordLogin"], $rowLogin['password'] );//verifica a password retorna 1 -true, 0 - false
+  $testePass = password_verify ( $_POST["passwordLogin"], $rowLogin['senha'] );//verifica a password retorna 1 -true, 0 - false
   
   $countLogin = mysqli_num_rows($resultLogin); //contar rows da query
 
@@ -44,12 +44,12 @@ if(isset($_POST['login'])){
 	  else{
 		  
 		  require("index.php");
-		  echo "<script type='text/javascript'>alert('Your account has been disabled!')</script>";
+		  echo "<script type='text/javascript'>alert('A sua conta esta inativa!')</script>";
 		  
 		  }
   }else {
 	require("failLogin.php");
-	echo "<script type='text/javascript'>alert('Your Login Name or Password is invalid!')</script>";
+	echo "<script type='text/javascript'>alert('O seu username ou paswword é invalida!')</script>";
 		  
   }
 }

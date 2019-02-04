@@ -16,7 +16,7 @@
 		if (strpos($url,'index.php') !== false) { ?>
       <ul class="nav navbar-nav">
 		<li><a href="#about">Sobre Nós</a></li>
-		<li><a href="#services">Partners</a></li>
+		<li><a href="#services">Parcerias</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#partners">Causes</a></li>
       </ul>

@@ -12,7 +12,7 @@ include('config.php');
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <title>WeShare</title>
+  <title>Help Running</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -51,13 +51,14 @@ include('config.php');
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center" >
   <div id="partners" class="container-fluid text-center">
-  <h2><Strong>Parcerias<strong></h2>~
+  <h2><Strong>Parcerias<strong></h2>
   <br><br>
   <div class="row slideanim">
     <div class="col-sm-4">
-    <img src="images/runportugal.jpg" width="150" height="110" class="d-inline-block align-top slideanim" alt="" style="margin-bottom:10px;">
+    <img src="images/runportugal.png" width="300" height="150" class="d-inline-block align-top slideanim" alt="" style="margin-bottom:10px;">
+    </div>
 </div>
-
+<br>
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACTO</h2>
@@ -113,11 +114,7 @@ include('config.php');
 
 	  </div>
 	</div><br>
-	<div class="container">
-		<div class="login-or">
-			<hr class="hr-or">
-			<span class="span-or"><i class="heart glyphicon glyphicon-heart"></i></span>
-		</div>		
+	<div class="container">		
 	</div>
 <script>
 $(document).ready(function(){
