@@ -118,6 +118,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
+    <br><br><br>
         <h2>Login</h2>
         <p>Insira por favor as credênciais proporcionadas pelo administrador:</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -136,6 +137,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             
         </form>
-    </div>    
+    </div> 
+      
 </body>
 </html>
