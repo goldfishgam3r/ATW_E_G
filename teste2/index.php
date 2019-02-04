@@ -50,6 +50,12 @@ include('config.php');
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center" >
+  <div id="partners" class="container-fluid text-center">
+  <h2><Strong>Parcerias<strong></h2>~
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+    <img src="images/runportugal.jpg" width="150" height="110" class="d-inline-block align-top slideanim" alt="" style="margin-bottom:10px;">
 </div>
 
 <!-- Container (Contact Section) -->

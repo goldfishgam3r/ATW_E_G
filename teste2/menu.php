@@ -15,11 +15,10 @@
 	<?php $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 		if (strpos($url,'index.php') !== false) { ?>
       <ul class="nav navbar-nav">
-		<li><a href="#about">About us</a></li>
-		<li><a href="#services">Services</a></li>
-		<li><a href="#partners">Partners</a></li>
+		<li><a href="#about">Sobre Nós</a></li>
+		<li><a href="#services">Partners</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#causes">Causes</a></li>
+        <li><a href="#partners">Causes</a></li>
       </ul>
 		<?php } else { ?>
 		<ul class="nav navbar-nav">
