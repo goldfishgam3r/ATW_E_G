@@ -1,7 +1,16 @@
+<?php
+require('session.php');
+	
+	$dataAtual = date('Y-m-d');
+	$query = "UPDATE evento SET estado = 0 WHERE dataevento < '$dataAtual'";
+	$result = mysqli_query ($conn, $query);
+	
+	$sqlGetEventos = "SELECT * FROM evento WHERE estado = 1 ORDER BY data_ini ASC";
+	$resultGetEventos = mysqli_query($conn,$sqlGetEventos);
+    $count = mysqli_num_rows($resultGetEventos);
+?>
 <head>
-  <meta charset="UTF-8">
-  <title>PR01</title>
-  
+  <meta charset="UTF-8">  
   
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
 
@@ -12,7 +21,7 @@
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <?php
-    require('menu.php');
+    require('menulogged.php');
   ?>
 
 <?php
@@ -38,12 +47,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+        <h1>Olá, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Bem-vindo ao nosso site.</h1>
         
     </div>
     <p>
-        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+        <a href="reset-password.php" class="btn btn-warning">Reset Password</a>
+        <a href="logout.php" class="btn btn-danger">Sign Out</a>
     </p>
 </body>
 </html>
