@@ -2,7 +2,7 @@
 // Include config file
 require_once "config.php";
 require("menu.php");
- ssdasadsadada
+
 // Define variables and initialize with empty values
 $desigancaoe = $designacao = $hora = $datal = "";
 $desigancaoe_err = $designacao_err = $hora_err = $datal_err = "";
