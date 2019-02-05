@@ -7,14 +7,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">Help Running</a>
+        <a class="navbar-brand" href="welcome.php"></a>
+        <img src="images/logoHR.png" width="49" height="49" class="d-inline-block align-top" alt="" style="margin-bottom:10px;">
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="#sobre">Sobre</a></li>
           <li><a href="#contact">Contact</a></li>
-          
           <li><a href="evento.php">Eventos</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

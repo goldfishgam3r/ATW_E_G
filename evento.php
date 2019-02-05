@@ -17,7 +17,7 @@ $resultevento= mysqli_query($conn, $queryevento);
 <body>
 <!-- Navbar -->    
 <?php
-require('menu.php');
+require('menulogged.php');
 ?>
 <!--  Jumbotron  -->
     <div class="jumbotron">
