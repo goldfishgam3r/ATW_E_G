@@ -19,7 +19,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <?php
-          include("session.php");
+          
           if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             ?>
           <li><a href="welcome.php"><?php echo($_SESSION["username"])?></a></li>
