@@ -20,7 +20,7 @@
         <li><a href="#contact">Contactos</a></li>
 		<?php } else { ?>
 		<ul class="nav navbar-nav">
-			<li><a href="index.php">Home</a></li>
+    <li><a href="index.php">Home</a></li>
 		
 		<?php } ?>
     <li><a href="pesquisaevento.php">Eventos</a></li>
