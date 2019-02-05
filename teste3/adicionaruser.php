@@ -257,6 +257,7 @@ if(empty(trim($_POST["email"]))){
 if(isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "admin"){
 ?>
     <div class="wrapper">
+    <br>
         <h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
