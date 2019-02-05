@@ -27,8 +27,6 @@
           <?php
           }else{
             ?>
-             <li><a>Visitante</a></li>
-          <li><a href="login.php">Login</a></li>
           <?php
           }
           ?>
