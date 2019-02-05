@@ -21,14 +21,16 @@
       
 		<?php } else { ?>
 		<ul class="nav navbar-nav">
-			<li><a href="index.php">Home</a></li>
+    <li><a href="#about">Sobre Nós</a></li>
+		<li><a href="#partners">Parcerias</a></li>
+    <li><a href="#contact">Contactos</a></li>
 		
 		<?php } ?>
     
 			<li class="dropdown">
 			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eventos<span class="caret"></span></a>
 			  <ul class="dropdown-menu">
-				<li><a href="pesquisaevento.php">Procurar Eventos</a></li>
+				<li><a href="welcome.php">Procurar Eventos</a></li>
 				<li><a href="adicionarevento.php">Criar Eventos</a></li>
 				<li><a href="adicionarprova.php">Adicionar Provas</a></li>
 				<li role="separator" class="divider"></li>
