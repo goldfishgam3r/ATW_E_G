@@ -11,39 +11,18 @@
   <!-- Wrapper for slides -->
 	<div class="carousel-inner">
 		<div class="item active">
-			<img src="images/mcdonald.jpg" alt="mcdonald" style = "height: 400px; width: 100%; object-fit: contain;" >
-			<div class="container">
-				<div class="carousel-caption" >
-					<a class="btn btn-danger btn-lg" href="#" role="button" >View More</a>
-				</div>
-			</div>
+			<img src="images/Paralympic_flag.svg.png" alt="mcdonald" style = "height: 400px; width: 100%; object-fit: contain;" >
 		</div>
 
 		<div class="item">
-			<img src="images/handsnew.png" alt="Los Angeles" style = "height: 400px; width: 100%; object-fit: contain;" >			
-			<div class="container">
-				<div class="carousel-caption">
-					<h1></h1>
-					<a class="btn btn-primary btn-lg" href="registerFinal.php" role="button">Join us and support who needs!</a>
-				</div>
-			</div>
+			<img src="images/atletismo1.jpg" alt="Los Angeles" style = "height: 400px; width: 100%; object-fit: contain;" >			
 		</div>
 
-		<div class="item">
-		<div class="container">
-				<div class="carousel-caption">
-					<a class="btn btn-danger btn-lg" href="registerFinal.php" role="button">Want to help this cause?</a>
-				</div>
-			</div>		
-			<img src="images/carrousel2.png" alt="Los Angeles" style = "height: 400px; width: 100%; object-fit: contain;" >									
+		<div class="item">	
+			<img src="images/atletismo2.jpg" alt="Los Angeles" style = "height: 400px; width: 100%; object-fit: contain;" >									
 		</div>
 		<div class="item">
-		<div class="container">
-				<div class="carousel-caption">
-					<a class=" btn-lg" href="registerFinal.php" role="button"></a>
-				</div>
-			</div>		
-			<a href="registerFinal.php" role="button"> <img src="images/Childrens.jpg" alt="Los Angeles" style = "height: 400px; width: 100%; object-fit: contain;" ></a>									
+			<img src="images/atletismo3.jpg" alt="Los Angeles" style = "height: 400px; width: 100%; object-fit: contain;" ></a>									
 		</div>
 		<div class="item">
 		<div class="container">
