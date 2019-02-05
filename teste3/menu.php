@@ -17,7 +17,7 @@
       <ul class="nav navbar-nav">
 		<li><a href="#about">Sobre Nós</a></li>
 		<li><a href="#partners">Parcerias</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Contactos</a></li>
       
 		<?php } else { ?>
 		<ul class="nav navbar-nav">
