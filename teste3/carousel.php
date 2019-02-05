@@ -25,12 +25,7 @@
 			<img src="images/atletismo3.jpg" alt="Los Angeles" style = "height: 400px; width: 100%; object-fit: contain;" ></a>									
 		</div>
 		<div class="item">
-		<div class="container">
-				<div class="carousel-caption">
-					<a class="btn-lg" href="registerFinal.php" role="button"></a>
-				</div>
-			</div>		
-			<a href="registerFinal.php" role="button"> <img src="images/Donate.jpg" alt="Los Angeles" style = "height: 400px; width: 100%; object-fit: contain;" > </a>									
+			<img src="images/atletismo4.jpg" alt="Los Angeles" style = "height: 400px; width: 100%; object-fit: contain;" > </a>									
 		</div>
 	</div>
 
