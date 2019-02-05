@@ -19,7 +19,7 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <?php
 	header ('Content-type: text/html; charset=utf-8'); 
-    require('menu.php');
+    require('menulogged.php');
   ?>
 
 <?php
