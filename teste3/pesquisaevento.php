@@ -36,7 +36,7 @@ require('menu.php');
       <table class="table table-hover table-bordered " style = "text-align: center; margin:0;">
         <?php
             require_once "config.php";
-            $sql = "select ide, desigancao, local, categoria, dataevento, ativo, imagem from evento WHERE ide=1";
+            $sql = "select ide, desigancao, local, categoria, dataevento, ativo, imagem from evento";
             $result = mysqli_query($conn, $sql);
             ?>
 						<thead>
