@@ -15,7 +15,16 @@
           <li class="active"><a href="index.php">Home</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="evento.php">Eventos</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Causes<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="welcome.php">Eventos</a></li>
+            <li><a href="criarEvento.php">Adicionar Eventos</a></li>
+            <li><a href="gerirEvento.php">Manage Causes</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="myProduto.php">Donated Products</a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <?php
