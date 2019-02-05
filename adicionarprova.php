@@ -3,8 +3,8 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$desigancaoe = $designacao = $hora = "";
-$desigancaoe_err = $designacao_err = $hora_err = "";
+$desigancaoe = $designacao = $hora = $datal = "";
+$desigancaoe_err = $designacao_err = $hora_err = $datal_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -36,22 +36,29 @@ if(empty(trim($_POST["ide"]))){
     $desigancaoe = trim($_POST["ide"]);
 }
 
+// Validate date
+if(empty(trim($_POST["datal"]))){
+    $datal_err = "Por favor insira a data limite de inscrição.";     
+} else{
+    $datal = trim($_POST["datal"]);
+}
 
     
     // Check input errors before inserting in database
-    if(empty($designacao_err) && empty($hora_err) && empty($desigancaoe_err)){
+    if(empty($designacao_err) && empty($hora_err) && empty($desigancaoe_err) && empty($datal_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO prova (designacao, hora, idevento) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO prova (designacao, hora, idevento, datalimite) VALUES (?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_designacao, $param_hora, $param_desigancaoe);
+            mysqli_stmt_bind_param($stmt, "ssss", $param_designacao, $param_hora, $param_desigancaoe, $param_datal);
             
             // Set parameters
             $param_designacao = $designacao;
             $param_hora = $hora;
             $param_desigancaoe = $desigancaoe;
+            $param_datal = $datal;
             
             
 
@@ -115,6 +122,11 @@ if(empty(trim($_POST["ide"]))){
                 <label>Hora</label>
                 <input type="time" name="hora" class="form-control" value="<?php echo $hora; ?>">
                 <span class="help-block"><?php echo $hora_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($datal_err)) ? 'has-error' : ''; ?>">
+                <label>Data de Limite de Inscrição</label>
+                <input type="date" name="datal" class="form-control" value="<?php echo $datal; ?>">
+                <span class="help-block"><?php echo $datal_err; ?></span>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
