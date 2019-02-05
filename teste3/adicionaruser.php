@@ -1,6 +1,7 @@
 <?php
 // Include config file
 require_once "config.php";
+require("menu.php");
  
 // Define variables and initialize with empty values
 $nome = $username = $password = $confirm_password = $nif = $cc = $datan = $telf = $email = $nac = $morada = $tamanho = $gender = $fed = $ativo ="";

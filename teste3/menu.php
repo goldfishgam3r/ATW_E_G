@@ -29,10 +29,10 @@
 			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eventos<span class="caret"></span></a>
 			  <ul class="dropdown-menu">
 				<li><a href="pesquisaevento.php">Procurar Eventos</a></li>
-				<li><a href="adcionarevento.php">Criar Eventos</a></li>
-				<li><a href="gerirEvento.php">Manage Causes</a></li>
+				<li><a href="adicionarevento.php">Criar Eventos</a></li>
+				<li><a href="adicionarprova.php">Adicionar Provas</a></li>
 				<li role="separator" class="divider"></li>
-				<li><a href="myProduto.php">Donated Products</a></li>
+				<li><a href="adicionaruser.php">Adicionar Utilizador</a></li>
 			  </ul>
 			</li>
     </ul>

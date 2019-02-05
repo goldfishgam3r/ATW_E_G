@@ -1,6 +1,7 @@
 <?php
 // Include config file
 require_once "config.php";
+require("menu.php");
  
 // Define variables and initialize with empty values
 $desigancao = $local = $coordenadas = $categoria = $dataevento = $ativo = $imagem = "";
@@ -143,6 +144,7 @@ if(empty(trim($_POST["imagem"]))){
 </head>
 <body>
     <div class="wrapper">
+    <br>
         <h2>Adicionar evento</h2>
         <p>Preencha todos os dados do evento.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

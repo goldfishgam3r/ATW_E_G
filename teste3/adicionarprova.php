@@ -1,6 +1,7 @@
 <?php
 // Include config file
 require_once "config.php";
+require("menu.php");
  
 // Define variables and initialize with empty values
 $desigancaoe = $designacao = $hora = $datal = "";
@@ -71,13 +72,9 @@ if(empty(trim($_POST["datal"]))){
                 echo "Something went wrong. Please try again later.";
             }
         }
-         
-        // Close statement
-        mysqli_stmt_close($stmt);
+
     }
     
-    // Close connection
-    mysqli_close($conn);
 }
 ?>
  
@@ -94,6 +91,7 @@ if(empty(trim($_POST["datal"]))){
 </head>
 <body>
     <div class="wrapper">
+    <br>
         <h2>Adicionar prova</h2>
         <p>Preencha todos os dados da prova.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
