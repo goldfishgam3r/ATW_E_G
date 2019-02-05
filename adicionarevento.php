@@ -3,8 +3,8 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$desigancao = $local = $coordenadas = $categoria = $dataevento = $ativo ="";
-$desigancao_err = $local_err = $coordenadas_err = $categoria_err = $dataevento_err = $ativo_err = "";
+$desigancao = $local = $coordenadas = $categoria = $dataevento = $ativo = $imagem = "";
+$desigancao_err = $local_err = $coordenadas_err = $categoria_err = $dataevento_err = $ativo_err = $imagem_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -84,16 +84,23 @@ if(empty(trim($_POST["dataevento"]))){
     $dataevento = trim($_POST["dataevento"]);
 }
 
+// Validate imagem
+if(empty(trim($_POST["imagem"]))){
+    $imagem = "images/default.png";     
+} else{
+    $imagem = trim($_POST["imagem"]);
+}
+
     
     // Check input errors before inserting in database
-    if(empty($desigancao_err) && empty($local_err) && empty($coordenadas_err) && empty($categoria_err) && empty($dataevento_err) && empty($ativo_err)){
+    if(empty($desigancao_err) && empty($local_err) && empty($coordenadas_err) && empty($categoria_err) && empty($dataevento_err) && empty($ativo_err && empty($imagem_err))){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO evento (desigancao, local, coordenadas, categoria, dataevento, ativo) VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO evento (desigancao, local, coordenadas, categoria, dataevento, ativo, imagem) VALUES (?, ?, ?, ?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssssss", $param_desigancao, $param_local, $param_coordenadas, $param_categoria, $param_dataevento, $param_ativo);
+            mysqli_stmt_bind_param($stmt, "sssssss", $param_desigancao, $param_local, $param_coordenadas, $param_categoria, $param_dataevento, $param_ativo, $param_imagem);
             
             // Set parameters
             $param_desigancao = $desigancao;
@@ -102,7 +109,7 @@ if(empty(trim($_POST["dataevento"]))){
             $param_categoria = $categoria;
             $param_dataevento = $dataevento;
             $param_ativo = $ativo;
-            
+            $param_imagem =  $imagem;
 
             
             // Attempt to execute the prepared statement
@@ -171,6 +178,11 @@ if(empty(trim($_POST["dataevento"]))){
                 <label>Data do Evento</label>
                 <input type="date" name="dataevento" class="form-control" value="<?php echo $dataevento; ?>">
                 <span class="help-block"><?php echo $dataevento_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($imagem_err)) ? 'has-error' : ''; ?>">
+                <label>Imagem</label>
+                <input type="text" name="imagem" class="form-control" value="<?php echo $imagem; ?>">
+                <span class="help-block"><?php echo $imagem_err; ?></span>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
