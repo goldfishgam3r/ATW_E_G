@@ -2,7 +2,7 @@
 // Include config file
 require_once "config.php";
 require("menu.php");
- 
+ ssdasadsadada
 // Define variables and initialize with empty values
 $desigancaoe = $designacao = $hora = $datal = "";
 $desigancaoe_err = $designacao_err = $hora_err = $datal_err = "";
@@ -72,9 +72,13 @@ if(empty(trim($_POST["datal"]))){
                 echo "Something went wrong. Please try again later.";
             }
         }
-
+         
+        // Close statement
+        mysqli_stmt_close($stmt);
     }
     
+    // Close connection
+    mysqli_close($conn);
 }
 ?>
  
