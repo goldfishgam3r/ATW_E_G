@@ -153,6 +153,9 @@ if(empty(trim($_POST["imagem"]))){
     </style>
 </head>
 <body>
+<?php
+if(isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "admin"){
+?>
     <div class="wrapper">
     <br>
         <h2>Adicionar evento</h2>
@@ -201,6 +204,17 @@ if(empty(trim($_POST["imagem"]))){
                 <input type="reset" class="btn btn-default" value="Reset">
             </div>
         </form>
-    </div>    
+    </div>   
+    <?php
+        }if($_SESSION["tipo"] !== "admin"){?>
+        
+            <div class="wrapper">
+            <br>
+            <h2>Atenção</h2>
+            <p>Não tem permissão para aceder a esta página.</p>
+            </div>   
+        
+<?php } 
+?>
 </body>
 </html>
