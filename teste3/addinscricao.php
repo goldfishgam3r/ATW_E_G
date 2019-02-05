@@ -50,7 +50,7 @@ if(empty(trim($_POST["prova"]))){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                header("location: eventable3.php");
+                header("location: pesquisaevento.php");
             } else{
                 echo "Something went wrong. Please try again later.";
             }
