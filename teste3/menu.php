@@ -18,12 +18,14 @@
 		<li><a href="#about">Sobre Nós</a></li>
 		<li><a href="#partners">Parcerias</a></li>
         <li><a href="#contact">Contact</a></li>
-      </ul>
+      
 		<?php } else { ?>
 		<ul class="nav navbar-nav">
 			<li><a href="index.php">Home</a></li>
-		</ul>
+		
 		<?php } ?>
+    <li><a href="eventable3.php">Eventos</a></li>
+    </ul>
       <ul class="nav navbar-nav navbar-right">
       <?php
           session_start();
@@ -35,7 +37,7 @@
           }else{
             ?>
              <li><a>Visitante</a></li>
-          <li><a href="login.php">Login</a></li>
+             <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           <?php
           }
           ?>
